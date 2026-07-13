@@ -1,7 +1,7 @@
 "use client";
 import "./landing.css";
 import { useState } from "react";
-import { MailOutline, Padding, PhoneAndroid } from "@mui/icons-material";
+import { MailOutline } from "@mui/icons-material";
 import SocialMedia from "./widgets/social_media_icons";
 import Bio from "./widgets/bio";
 import Experience from "./widgets/experience";
@@ -35,13 +35,13 @@ export default function Home() {
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
 
-              <Image src="/shriyansh.jpeg" alt="Shriyansh Raj" width={200} height={200} style={{ borderRadius: "50%", marginBottom: 16, }} />
+              <Image src="/shriyansh.jpg" alt="Shriyansh Raj" width={200} height={200} style={{ borderRadius: "50%", marginBottom: 16, width: 200, height: 200, objectFit: "cover" }} />
 
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                 <a href="/">Shriyansh Raj</a>
               </h1>
               <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-                Flutter Engineer at Sunstone
+                Flutter Engineer
               </h2>
               <p className="mt-4 max-w-xs leading-normal">
                 I build pixel-perfect, engaging, and accessible digital
@@ -55,13 +55,6 @@ export default function Home() {
                   className="hover:underline"
                 >
                   iShreeyansh@gmail.com
-                </a>
-              </p>
-
-              <p className="mt-4 max-w-xs leading-normal flex items-center gap-22">
-                <PhoneAndroid sx={{ height: 20, marginRight: 1 }} />
-                <a href="tel:+919685962799" className="hover:underline">
-                  +919685962799
                 </a>
               </p>
 
@@ -137,31 +130,20 @@ function Experiences() {
       <ol className="group/list">
         <li className="mb-12">
           <Experience
-            role="Flutter Engineer"
+            role="SDE II - Flutter"
             companyName={{
               name: "Sunstone",
-              url: "https://hub.sunstone.in/",
+              url: "https://sunstone.in/",
             }}
-            subtitle="Software Engineer"
+            subtitle="Flutter Developer"
             description=<>
               <DescriptionPoint
-                title="LMS & Content Library"
+                title="Mobile Engineering Lead"
                 description={
                   <>
-                    Developed a Learning Management System (LMS) and a
-                    comprehensive content library for both mobile apps and web
-                    platforms, featuring video progress tracking capabilities.
-                  </>
-                }
-              />
-
-              <DescriptionPoint
-                title="Bluetooth Low Enegery(BLE)"
-                description={
-                  <>
-                    Engineered an attendance automation system utilizing
-                    Bluetooth Low Energy (BLE), enabling users to mark
-                    attendance without the need for additional hardware.
+                    Led mobile engineering, building high-performance Flutter
+                    apps with native iOS/Android WebViews, bridging layers, and
+                    advanced streaming features.
                   </>
                 }
               />
@@ -170,44 +152,51 @@ function Experiences() {
                 title="Firebase Services"
                 description={
                   <>
-                    Implemented various Firebase services, including Firebase
-                    Cloud Messaging (FCM), Remote Config, Analytics, and Dynamic
-                    Links.
+                    Integrated Firebase (FCM, Remote Config, Dynamic Links,
+                    Analytics, Google Auth) for rollout management,
+                    notifications, and mobile insights.
                   </>
                 }
               />
 
               <DescriptionPoint
-                title="Webview"
+                title="Video Player"
                 description={
                   <>
-                    Extensively worked with webviews (Native and Flutter),
-                    developing a media player, employing it as a widget, and
-                    facilitating communication.
+                    Built a custom multi-provider video player
+                    (YouTube/Wistia/M3U8) with adaptive streaming and
+                    analytics.
                   </>
                 }
               />
 
               <DescriptionPoint
-                title="Analytics & Tracking"
+                title="Bluetooth Low Energy (BLE)"
                 description={
                   <>
-                    Analytics & Tracking: Gained experience with multiple
-                    platforms such as Mixpanel, MoEngage, and Firebase.
-                    Developed an algorithm for accurately calculating time spent
-                    on pages.
+                    Developed a BLE-based attendance system used by 16,000+
+                    students daily, automating check-ins and eliminating
+                    manual effort.
                   </>
                 }
               />
 
               <DescriptionPoint
-                title="Deep Links & Dynamic link"
+                title="Dynamic Forms"
                 description={
                   <>
-                    Established an infrastructure to manage deep links using
-                    pattern matching and implemented Branch and Firebase Dynamic
-                    Links. also implemented Deffered deep linking for tracking
-                    ads app installs.
+                    Created dynamic JSON-driven forms supporting instant UI
+                    generation across mobile apps.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="Backend & APIs"
+                description={
+                  <>
+                    Built and optimized REST APIs (Node.js, Express) with
+                    caching, queues, and rate-limiting.
                   </>
                 }
               />
@@ -216,28 +205,79 @@ function Experiences() {
                 title="CI/CD"
                 description={
                   <>
-                    CI/CD: Set up an Azure pipeline integrated with GitHub from
-                    scratch, enabling simultaneous deployment of builds across
-                    iOS, Android, and web platforms.
+                    Implemented CI/CD for iOS, Android, and Web using Fastlane,
+                    Azure DevOps, and GitHub Actions.
                   </>
                 }
               />
 
               <DescriptionPoint
-                title="Native Development"
+                title="LMS & Content Library"
                 description={
                   <>
-                    Contributed to the native development aspects of Android,
-                    iOS, and web platforms.
+                    Built a custom LMS for 8,000+ students with video,
+                    quizzes, assignments, coding assessments, and real-time
+                    progress tracking.
                   </>
                 }
               />
 
               <DescriptionPoint
+                title="Moodle Integration"
                 description={
                   <>
-                    Addressed numerous critical bugs and made contributions to
-                    open-source libraries.
+                    Integrated Moodle with a custom auto-login solution,
+                    cutting third-party cost and maintenance.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="AI Call Audit System"
+                description={
+                  <>
+                    Developed an AI call audit system enabling batch
+                    processing and faster turnaround.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="AI Content Feedback"
+                description={
+                  <>
+                    Built a Python backend for AI-driven content feedback,
+                    improving teaching efficiency and engagement.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="Analytics & Tracking"
+                description={
+                  <>
+                    Integrated analytics platforms (MoEngage, Mixpanel,
+                    Branch) to enhance user insights and attribution accuracy.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="Automation & Architecture"
+                description={
+                  <>
+                    Built Selenium scrapers, automated data processing, and
+                    implemented Clean Architecture across projects.
+                  </>
+                }
+              />
+
+              <DescriptionPoint
+                title="Team Leadership"
+                description={
+                  <>
+                    Managed a team of 2 engineers, owned critical modules, and
+                    led architecture decisions.
                   </>
                 }
               />
@@ -252,12 +292,13 @@ function Experiences() {
               { name: "Getx" },
               { name: "Firebase" },
               { name: "CI/CD" },
+              { name: "Node.js" },
               { name: "Mixpanel MoEngage" },
               { name: "LMS" },
               { name: "Github" },
             ]}
-            timePeriod="2022 - Present"
-            isPresent={true}
+            timePeriod="Mar 2023 — May 2026"
+            isPresent={false}
           />
         </li>
 
@@ -283,7 +324,7 @@ function Experiences() {
             technologies={[
               { name: "Flutter" },
               { name: "Clean architecture" },
-              { name: "REST sevices" },
+              { name: "REST services" },
               { name: "Cucumber" },
               { name: "BDD" },
               { name: "Windows Automation" },
@@ -291,13 +332,13 @@ function Experiences() {
               { name: "Java" },
               { name: "Azure devops" },
             ]}
-            timePeriod="Aug — May 2022 "
+            timePeriod="Aug 2021 — May 2022 "
           />
         </li>
 
         <li className="mb-12">
           <Experience
-            role="Flutter Devevloper"
+            role="Flutter Developer"
             companyName={{
               name: "Jsimple Technologies",
               url: "https://www.jsimple.com/",
@@ -335,7 +376,7 @@ function Experiences() {
               { name: "Google Maps" },
               { name: "Machine Learning" },
             ]}
-            timePeriod="Feb — Sep 2021 "
+            timePeriod="Feb 2021 — Sep 2021 "
           />
         </li>
       </ol>
@@ -369,6 +410,48 @@ function Projects() {
           Projects
         </h2>
       </div>
+
+      <Project
+        title="Flutter Process Manager"
+        description="VSCode extension for managing Flutter run processes — Hot Reload/Restart/Quit, live logs, and multi-device support from a sidebar panel. Tracks processes whether started manually or by AI coding agents."
+        image="/flutter-process-manager.png"
+        url="https://marketplace.visualstudio.com/items?itemName=shriyanshraj.flutter-process-manager"
+        technologies={[
+          { label: "VSCode Extension" },
+          { label: "Flutter" },
+          { label: "TypeScript" },
+        ]}
+      />
+
+      <Project
+        title="Sunstone App"
+        description="Extensively worked on Features like LMS, Live Classes, and many more. Created LMS from scratch, which is used by 10000+ students. "
+        image="/sunstone.png"
+        url="https://play.google.com/store/apps/details?id=com.sunstone.hub&hl=en_IN&gl=US"
+        technologies={[
+          { label: "Flutter" },
+          { label: "Getx" },
+          { label: "Firebase" },
+          { label: "Mixpanel" },
+          { label: "Hive" },
+          { label: "Dart" },
+          { label: "Ed-Tech" },
+        ]}
+      />
+
+      <Project
+        title="HighPriestess App"
+        description="Cross-platform tarot reading app built with Flutter, featuring personalized card readings, daily insights, and love/career guidance. Powered by a Firebase backend with Auth, Firestore, Cloud Functions, AI-driven interpretations, push notifications, and subscription payments via Razorpay."
+        image="/highpriestess.png"
+        url="https://play.google.com/store/apps/details?id=com.highpriestiss.highpriestiss&hl=en_IN"
+        technologies={[
+          { label: "Flutter" },
+          { label: "Firebase" },
+          { label: "Cloud Functions" },
+          { label: "AI" },
+          { label: "Razorpay" },
+        ]}
+      />
 
       <Project
         title="iFakePDF"
@@ -410,20 +493,6 @@ function Projects() {
       />
 
       <Project
-        title="HighPriestess App"
-        description="Cross-platform tarot reading app built with Flutter, featuring personalized card readings, daily insights, and love/career guidance. Powered by a Firebase backend with Auth, Firestore, Cloud Functions, AI-driven interpretations, push notifications, and subscription payments via Razorpay."
-        image="/highpriestess.png"
-        url="https://play.google.com/store/apps/details?id=com.highpriestiss.highpriestiss&hl=en_IN"
-        technologies={[
-          { label: "Flutter" },
-          { label: "Firebase" },
-          { label: "Cloud Functions" },
-          { label: "AI" },
-          { label: "Razorpay" },
-        ]}
-      />
-
-      <Project
         title="Formula Lockscreen"
         description="Android app that replaces the lockscreen with random math formulas. Built a library of ~1000 formulas across categories and subcategories, letting users pick their preferred set to display."
         image="/formula_lockscreen.png"
@@ -432,22 +501,6 @@ function Projects() {
           { label: "Android" },
           { label: "Kotlin" },
           { label: "Jetpack Compose" },
-          { label: "Ed-Tech" },
-        ]}
-      />
-
-      <Project
-        title="Sunstone App"
-        description="Extensively worked on Features like LMS, Live Classes, and many more. Created LMS from scratch, which is used by 10000+ students. "
-        image="/sunstone.png"
-        url="https://play.google.com/store/apps/details?id=com.sunstone.hub&hl=en_IN&gl=US"
-        technologies={[
-          { label: "Flutter" },
-          { label: "Getx" },
-          { label: "Firebase" },
-          { label: "Mixpanel" },
-          { label: "Hive" },
-          { label: "Dart" },
           { label: "Ed-Tech" },
         ]}
       />

@@ -17,12 +17,11 @@ export default function Bio(props: {}) {
         <p>
           Experienced software developer with over 5 years focused on creating
           robust solutions. Specializing in Flutter for cross-platform mobile
-          apps and NestJS for full-stack development. Proficient in Flutter,
+          apps and Node.js for full-stack development. Proficient in Flutter,
           GetX, Firebase, and native iOS/Android. Passionate about technology,
           innovation, and delivering high-quality solutions.
         </p>
-        <p className="emoji">🚀👨‍💻</p>
-        <p>Let&apos;s code for a future where innovation knows no bounds!</p>
+
       </div>
     </section>
   );
