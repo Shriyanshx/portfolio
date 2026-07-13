@@ -2,12 +2,12 @@ import Image from "next/image";
 import Chip from "./chip";
 
 export default function Project(props: {
-    title: string;
-    description: string;
-    technologies: { label: string }[];
-    url: string;
-    image: string;
-  }){
+  title: string;
+  description: string;
+  technologies: { label: string }[];
+  url: string;
+  image: string;
+}) {
   return (
     <>
       <div>
@@ -45,32 +45,32 @@ export default function Project(props: {
                   </a>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">{props.description}</p>
-  
+
                 <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
-                
-                {
-               props.technologies &&
-                props.technologies!.map((technology, index) => (
-                  <li key = {index} className="mr-3 mb-2">
-                    <Chip label={technology.label} />
-                  </li>
-                ))}
-              </ul>
+
+                  {
+                    props.technologies &&
+                    props.technologies!.map((technology, index) => (
+                      <li key={index} className="mr-3 mb-2">
+                        <Chip label={technology.label} />
+                      </li>
+                    ))}
+                </ul>
               </div>{" "}
-             
+
               <Image
-                className="rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1"
+                className="h-28 w-28 rounded object-contain sm:order-1 sm:col-span-2 sm:translate-y-1"
                 src={props.image}
-                width={200}
-                height={48}
+                width={300}
+                height={200}
                 alt={""}
               ></Image>
-  
-              
+
+
             </div>
           </li>
         </ul>
       </div>
     </>
   );
-  }
+}

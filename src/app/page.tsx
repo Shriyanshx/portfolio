@@ -35,7 +35,7 @@ export default function Home() {
           <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
             <div>
 
-             <Image src = "/shriyansh.jpeg" alt="Shriyansh Raj" width={200} height={200} style={{borderRadius : "50%", marginBottom: 16,}}/>
+              <Image src="/shriyansh.jpeg" alt="Shriyansh Raj" width={200} height={200} style={{ borderRadius: "50%", marginBottom: 16, }} />
 
               <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
                 <a href="/">Shriyansh Raj</a>
@@ -109,7 +109,7 @@ export default function Home() {
           <main id="content" className="pt-24 lg:w-1/2 lg:py-24">
             <div className="github-commit">
 
-            <GitHubCalendar username="shriyanshx" />
+              <GitHubCalendar username="shriyanshx" />
             </div>
 
             <Bio />
@@ -371,15 +371,67 @@ function Projects() {
       </div>
 
       <Project
+        title="iFakePDF"
+        description="Full-stack web app that lets users select a region on a PDF and replace it with AI-generated content (signatures, seals, handwriting) seamlessly blended into the page. Built with a Next.js/React frontend and FastAPI/PyMuPDF backend; integrates multiple AI image generation APIs with edge-feathering and noise-matching for realistic compositing."
+        image="/ifakepdf.svg"
+        url="https://ifakepdf.com"
+        technologies={[
+          { label: "Next.js" },
+          { label: "React" },
+          { label: "FastAPI" },
+          { label: "PyMuPDF" },
+          { label: "AI" },
+        ]}
+      />
+
+      <Project
+        title="ClipMind"
+        description="Native macOS clipboard manager (SwiftUI + AppKit) that auto-captures clipboard history and layers on-device AI via Apple Intelligence for smart categorization, daily summaries, and productivity insights. Features a global-shortcut quick-access panel, a full-featured main window with regex search/stats/favorites, AI-powered text rewriting (professional/casual/concise styles), and export/import — all with a privacy-first, local-only storage design."
+        image="/clipmind_logo.png"
+        url="https://clipmindapp.com/"
+        technologies={[
+          { label: "Swift" },
+          { label: "SwiftUI" },
+          { label: "AppKit" },
+          { label: "Apple Intelligence" },
+        ]}
+      />
+
+      <Project
+        title="WidgetForm"
+        description="iOS home-screen widget rendering LaTeX math formulas. Pick, pin, or add custom formulas, with customizable backgrounds and refresh intervals."
+        image="/widgetform.png"
+        url="https://apps.apple.com/us/app/widgetform/id6752328127"
+        technologies={[
+          { label: "Swift" },
+          { label: "SwiftUI" },
+          { label: "WidgetKit" },
+        ]}
+      />
+
+      <Project
+        title="HighPriestess App"
+        description="Cross-platform tarot reading app built with Flutter, featuring personalized card readings, daily insights, and love/career guidance. Powered by a Firebase backend with Auth, Firestore, Cloud Functions, AI-driven interpretations, push notifications, and subscription payments via Razorpay."
+        image="/highpriestess.png"
+        url="https://play.google.com/store/apps/details?id=com.highpriestiss.highpriestiss&hl=en_IN"
+        technologies={[
+          { label: "Flutter" },
+          { label: "Firebase" },
+          { label: "Cloud Functions" },
+          { label: "AI" },
+          { label: "Razorpay" },
+        ]}
+      />
+
+      <Project
         title="Formula Lockscreen"
-        description="This unique lock screen app, born from my passion for education and innovation, boasts over 1000 downloads with an impressive 4.7-star rating. Every time users press the power button, they are greeted with randomly displayed math and physics formulas, turning the mundane task of unlocking a phone into a moment of learning. As the sole creator, I designed and implemented every aspect of the app, showcasing my expertise in app development. "
-        image="/formula.png"
-        url="https://play.google.com/store/apps/details?id=com.shriyansh.formula_lockscreen"
+        description="Android app that replaces the lockscreen with random math formulas. Built a library of ~1000 formulas across categories and subcategories, letting users pick their preferred set to display."
+        image="/formula_lockscreen.png"
+        url="https://play.google.com/store/apps/details?id=com.stackindex.formula_lockscreen&hl=en_IN"
         technologies={[
           { label: "Android" },
-          { label: "SqLite" },
-          { label: "Java" },
-          { label: "XML" },
+          { label: "Kotlin" },
+          { label: "Jetpack Compose" },
           { label: "Ed-Tech" },
         ]}
       />
@@ -397,18 +449,6 @@ function Projects() {
           { label: "Hive" },
           { label: "Dart" },
           { label: "Ed-Tech" },
-        ]}
-      />
-
-      <Project
-        title="MP Transport"
-        description="A simple app to get the details of the vehicle owner by entering the vehicle number. It scrapes the data from the MP transport website using headless webview and displays it in a user-friendly manner. It has 50,000+ downloads and a 4.5-star rating."
-        image="/mptransport.png"
-        url="https://play.google.com/store/apps/details?id=com.techhole.mp_transport&hl=en_IN&gl=US"
-        technologies={[
-          { label: "Flutter" },
-          { label: "Admob" },
-          { label: "Scraper" },
         ]}
       />
     </section>
